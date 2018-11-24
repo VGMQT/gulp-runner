@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function() {
-  $.gulp.task('sprite:svg', function() {
-    return $.gulp.src('./source/sprite/*.svg')
+  $.gulp.task('svg:sprite', function() {
+    return $.gulp.src($.config.dev + '/images/svg/*.svg', { since: $.gulp.lastRun('svg:sprite') })
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -12,7 +12,7 @@ module.exports = function() {
         run: function ($) {
           $('[fill]').removeAttr('fill');
           $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
+          $('[styles]').removeAttr('style');
         },
         parserOptions: { xmlMode: true }
       }))
@@ -24,6 +24,6 @@ module.exports = function() {
           }
         }
       }))
-      .pipe($.gulp.dest($.config.root + '/assets/img'))
-  })
+      .pipe($.gulp.dest($.config.dev + '/images/sprites'));
+  });
 };

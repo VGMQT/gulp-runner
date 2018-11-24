@@ -1,14 +1,11 @@
-# Учебная сборка Loftschool
+# gulp runner VGMQT build
+> "gulp": "^4.0.0"
 
-> Сборка работает на gulp версии 4.0. 
+#### How to launch:
 
-#### Для начала работы
-
-1. ```clone this repo```
-2. ```cd path/to/...```
-3. ```npm install gulpjs/gulp-cli -g```  
-> Установка последней версии Gulp CLI tools глобально (подробнее - [GitHub](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) )
-
-4. ```npm install```
-6. ```run gulp``` 
-
+1. ```git clone```
+2. ```npm i```
+3. ```npm i gulp-cli -g```
+4. ```gulp```
+5. Navigate to your localhost address
+(default is http://localhost:3000/)

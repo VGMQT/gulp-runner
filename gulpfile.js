@@ -1,37 +1,49 @@
 'use strict';
 
 global.$ = {
-  package: require('./package.json'),
-  config: require('./gulp/config'),
-  path: {
-    task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.foundation.js'),
-    cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
-  },
   gulp: require('gulp'),
+  path: {
+    tasks: require('./gulp/configs/tasks.js')
+  },
+  config: require('./gulp/configs/config'),
+  gp: require('gulp-load-plugins')(),
   del: require('del'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  buffer: require('vinyl-buffer'),
+  merge: require('merge-stream')
 };
 
-$.path.task.forEach(function(taskPath) {
+$.path.tasks.forEach(function(taskPath) {
   require(taskPath)();
 });
 
-$.gulp.task('default', $.gulp.series(
-  'clean',
-  $.gulp.parallel(
-    'sass',
-    'pug',
-    'js:foundation',
-    'js:process',
-    'copy:image',
-    'css:foundation',
-    'sprite:svg'
-  ),
-  $.gulp.parallel(
-    'watch',
-    'serve'
+$.gulp.task('build',
+  $.gulp.series(
+    'clean',
+    'images:sprite',
+    'svg:sprite',
+
+    $.gulp.parallel(
+      // 'html',
+      'pug',
+      'css:vendor',
+      'sass',
+      'js:vendor',
+      // 'js:app-lint',
+      'js:app-minify',
+      'fonts',
+      'images'
+    )
   )
-));
+);
+
+$.gulp.task('default',
+  $.gulp.series(
+    'build',
+
+    $.gulp.parallel(
+      'watch',
+      'serve'
+    )
+  )
+);
