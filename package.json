@@ -1,5 +1,20 @@
 {
-  "name": "gulp-runner",
+  "name": "gulp-tasker",
+  "version": "1.0.0",
+  "description": "Easy editable gulp build with a flexible and convenient choice of tasks to run",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VGMQT/gulp-tasker.git"
+  },
+  "keywords": [
+    "gulp",
+    "task runner",
+    "builder"
+  ],
+  "author": "Vlad Gerasimovich <vg.email.2@gmail.com>",
+  "license": "MIT",
+  "bugs": "https://github.com/VGMQT/gulp-tasker/issues",
+  "homepage": "https://github.com/VGMQT/gulp-tasker",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "~3.0.0",

@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('svg:sprite', function() {
-    return $.gulp.src($.config.dev + '/images/svg/*.svg', { since: $.gulp.lastRun('svg:sprite') })
+    return $.gulp.src($.config.dev + '/images/sprites/svg/*.svg', { since: $.gulp.lastRun('svg:sprite') })
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -24,6 +24,6 @@ module.exports = function() {
           }
         }
       }))
-      .pipe($.gulp.dest($.config.dev + '/images/sprites'));
+      .pipe($.gulp.dest($.config.dev + '/images/sprites/svg'));
   });
 };
