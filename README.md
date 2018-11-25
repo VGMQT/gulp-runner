@@ -80,7 +80,7 @@ Current (1.0.0) version contains following tasks:
   Launching and configuring browserSync
   
 #### Dependencies
-You **should** ```npm update``` and ```npm audit fix -f``` as *Gulp tasker* will always work with latest versions of dependencies, so it is **strongly recommended** to update it.
+You **should** ```npm update``` and ```npm audit fix -f``` as *Gulp tasker* will always work with latest versions of dependencies, so it is **strongly recommended**.
 
 ```
 "devDependencies": {
