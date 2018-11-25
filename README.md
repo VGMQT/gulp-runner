@@ -3,7 +3,7 @@
 
 #### How to launch:
 
-1. ```git clone```
+1. ```git clone``` or download, if you want to use it for your own project
 2. ```npm i```
 3. ```npm i gulp-cli -g```
 4. ```gulp```
