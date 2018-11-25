@@ -56,6 +56,8 @@ Current (1.0.0) version contains following tasks:
 * **js:app-lint**
 
   Merging and linting all custom ```js``` files, which pathes are declared in ```gulp/configs/config.js```, and moving resulting ```app.js``` file to ```build/js```
+  
+  You can change ```.eslintrc``` as you want or add your own. For more information visit [Configuring ESLint](https://eslint.org/docs/user-guide/configuring "ESLint")
 
 * **js:app-minify**
 
@@ -77,7 +79,7 @@ Current (1.0.0) version contains following tasks:
 
   Launching and configuring browserSync
   
-#####Dependencies
+#### Dependencies
 You **should** ```npm update``` and ```npm audit fix -f``` as *Gulp tasker* will always work with latest versions of dependencies, so it is **strongly recommended** to update it.
 
 ```
@@ -112,7 +114,7 @@ You **should** ```npm update``` and ```npm audit fix -f``` as *Gulp tasker* will
 }
 ```
 
-##### License
+#### License
 Copyright © 2018, based on Loftschool 2017 Web Advanced course build.
 
 Licensed under the MIT license.
