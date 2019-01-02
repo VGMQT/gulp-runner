@@ -9,8 +9,8 @@ global.$ = {
   gp: require('gulp-load-plugins')(),
   del: require('del'),
   browserSync: require('browser-sync').create(),
-  buffer: require('vinyl-buffer'),
-  merge: require('merge-stream')
+  merge: require('merge-stream'),
+  fs: require('fs')
 };
 
 $.path.tasks.forEach(function(taskPath) {
@@ -20,8 +20,13 @@ $.path.tasks.forEach(function(taskPath) {
 $.gulp.task('build',
   $.gulp.series(
     'clean',
-    'images:sprite',
-    'svg:sprite',
+
+    $.gulp.parallel(
+      'images:sprite',
+      'svg:sprite',
+    ),
+
+    'images:minify',
 
     $.gulp.parallel(
       // 'html',
@@ -29,7 +34,7 @@ $.gulp.task('build',
       'css:vendor',
       'sass',
       'js:vendor',
-      // 'js:app-lint',
+      // 'js:app',
       'js:app-minify',
       'fonts',
       'images'
