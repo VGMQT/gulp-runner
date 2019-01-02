@@ -84,7 +84,7 @@ Current (1.1.0) version contains following tasks:
   Launches and configures browserSync
   
 #### Dependencies
-You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``` as *Gulp tasker* will always work with the latest versions of dependencies, so it is **strongly recommended**.
+You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``` as *Gulp tasker* will always work with the latest versions of the dependencies, so it is **strongly recommended**.
 
 ```
 "devDependencies": {
