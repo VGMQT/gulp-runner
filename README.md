@@ -1,4 +1,4 @@
-# Gulp tasker v.1.1.0
+# Gulp tasker v.1.1.1
 > "gulp": "^4.0.0"
 
 #### How to launch:
