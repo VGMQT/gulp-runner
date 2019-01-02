@@ -45,7 +45,7 @@ Current (1.1.0) version contains following tasks:
 
   Compiles ```pug``` files from ```pug/pages``` folder to ```build```
   
-  ```locals: JSON.parse($.fs.readFileSync('content.json', 'utf8'))``` can be enabled for using ```content.json``` as ```locals```
+  ```locals: JSON.parse($.fs.readFileSync('content.json', 'utf8'))``` can be enabled for using ```content.json``` for ```locals```
 
 * **css:vendor**
 
@@ -84,7 +84,7 @@ Current (1.1.0) version contains following tasks:
   Launches and configures browserSync
   
 #### Dependencies
-You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``` as *Gulp tasker* will always work with latest versions of dependencies, so it is **strongly recommended**.
+You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``` as *Gulp tasker* will always work with the latest versions of dependencies, so it is **strongly recommended**.
 
 ```
 "devDependencies": {
