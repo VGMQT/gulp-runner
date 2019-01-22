@@ -1,26 +1,24 @@
-# Gulp tasker v.1.1.1
+# Gulp tasker v.1.1.2
 > "gulp": "^4.0.0"
 
 #### How to launch:
 
-1. ```git clone``` or download, if you want to use it for your own project
-2. ```npm i```
-3. ```npm i gulp-cli -g```
+1. ```git clone```
+2. ```yarn``` / ```npm i```
+3. ```yarn global add gulp-cli``` / ```npm i gulp-cli -g```
 4. ```gulp```
 5. Navigate to your localhost address
 (default is http://localhost:3000/)
 
 #### What is this?
-Gulp tasker is an easy editable gulp build with a flexible and convenient choice of tasks to run.
-It means, for any project you about to start, you can choose only those tasks that you need for it,
-changing anything you want inside.
+Gulp tasker is an easy editable gulp build with a flexible and convenient choice of the tasks to run.
 
-Some tasks are doing the same job, but with different conditions. Such duplicate tasks are disabled (commented) in ```gulpfile.js```.
+Some of the tasks are doing the same job, but with a different conditions. Such duplicates are disabled (commented) in ```gulpfile.js```.
 For example:
-1. If we are using ```pug``` instead of ```html``` — we should disable **html** task
+1. If we use ```pug``` instead of ```html``` — we should disable **html** task
 2. If we do not want to minify our custom ```js``` — we should disable **js:app-minify** and enable **js:app**
 
-Current (1.1.0) version contains following tasks:
+Current (1.1.2) version contains following tasks:
 * **clean**
 
   Deletes ```build``` folder
@@ -73,7 +71,7 @@ Current (1.1.0) version contains following tasks:
 
 * **images**
 
-  Copies all files from ```dev/images``` folder to ```build/images```
+  Copies all files from ```dev/images``` folder to ```build/images``` except ```dev/images/sprites```
 
 * **watch**
 
@@ -105,12 +103,13 @@ You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``
     "gulp-rename": "^1.4.0",
     "gulp-replace": "~1.0.0",
     "gulp-sass": "~4.0.2",
+    "gulp-sass-glob": "^1.0.9",
     "gulp-sourcemaps": "~2.6.0",
     "gulp-svg-sprite": "~1.5.0",
     "gulp-svgmin": "~2.1.0",
     "gulp.spritesmith": "^6.9.0",
     "merge-stream": "^1.0.1"
-  },
+},
 "dependencies": {
     "jquery": "~3.3.1",
     "normalize.css": "~8.0.1"
@@ -118,6 +117,6 @@ You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``
 ```
 
 #### License
-Copyright © 2018, based on Loftschool 2017 Web Advanced course build.
+Copyright © 2018 - 2019, based on Loftschool 2017 Web Advanced course build.
 
 Licensed under the MIT license.

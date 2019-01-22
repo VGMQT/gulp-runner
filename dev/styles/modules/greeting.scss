@@ -11,12 +11,12 @@
   }
 
   &_picture {
+    @extend .icon-viking;
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100px;
     height: 114px;
-    background: url('/images/viking.png') no-repeat center;
     transform: translate3D(100%, 0, 0);
     transition: transform 0.5s;
   }
