@@ -1,4 +1,4 @@
-# Gulp tasker v.1.1.2
+# Gulp tasker v.1.1.3
 > "gulp": "^4.0.0"
 
 #### How to launch:
@@ -18,7 +18,7 @@ For example:
 1. If we use ```pug``` instead of ```html``` — we should disable **html** task
 2. If we do not want to minify our custom ```js``` — we should disable **js:app-minify** and enable **js:app**
 
-Current (1.1.2) version contains following tasks:
+Current (1.1.3) version contains following tasks:
 * **clean**
 
   Deletes ```build``` folder
