@@ -10,7 +10,7 @@ module.exports = function() {
                 imgPath: '../images/sprites/sprite.png',
                 cssName: 'sprite.scss',
                 cssFormat: 'css',
-                padding: 70
+                padding: 5
             })
         );
 

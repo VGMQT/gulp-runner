@@ -1,4 +1,4 @@
-# Gulp tasker v.1.1.3
+# Gulp tasker v.1.2.0
 > "gulp": "^4.0.0"
 
 #### How to launch:
@@ -86,11 +86,14 @@ You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``
 
 ```
 "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "browser-sync": "^2.26.3",
     "del": "~3.0.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "~6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-cheerio": "~0.6.2",
     "gulp-concat": "~2.6.1",
     "gulp-concat-css": "~3.1.0",
