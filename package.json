@@ -1,6 +1,6 @@
 {
   "name": "gulp-tasker",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Easy editable gulp build with a flexible and convenient choice of tasks to run",
   "repository": {
     "type": "git",
