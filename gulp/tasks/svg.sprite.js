@@ -28,6 +28,6 @@ module.exports = function() {
           }
         }
       }))
-      .pipe($.gulp.dest($.config.dev + '/images/sprites'));
+      .pipe($.gulp.dest($.config.build + '/images/sprites'));
   });
 };
