@@ -62,15 +62,6 @@
       "outline-color",
       "outline-offset",
 
-      "color",
-      "background",
-      "background-image",
-      "background-color",
-      "background-repeat",
-      "background-position",
-      "background-size",
-      "background-attachment",
-
       "text-align",
       "text-justify",
       "text-decoration",
@@ -88,6 +79,15 @@
       "font-weight",
       "line-height",
       "letter-spacing",
+
+      "color",
+      "background",
+      "background-image",
+      "background-color",
+      "background-repeat",
+      "background-position",
+      "background-size",
+      "background-attachment",
 
       "transform",
       "transform-style",
