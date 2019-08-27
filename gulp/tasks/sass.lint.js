@@ -1,10 +1,11 @@
-'use strict';
-
-module.exports = function() {
-  $.gulp.task('sass:lint', function(cb) {
-    $.exec(`yarn stylelint --fix ${$.config.dev}/styles/*.scss ${$.config.dev}/styles/**/*.scss`, function (error, stdout) {
-      console.log(stdout);
-      cb(error);
-    });
+module.exports = () => {
+  $.gulp.task('sass:lint', cb => {
+    $.exec(
+      `yarn stylelint --fix ${$.config.dev}/styles/**/*.{scss,sass,css}`,
+      (error, stdout) => {
+        console.log(stdout);
+        cb(error);
+      }
+    );
   });
 };

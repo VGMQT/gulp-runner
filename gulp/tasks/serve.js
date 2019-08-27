@@ -1,11 +1,12 @@
-'use strict';
-
-module.exports = function() {
-  $.gulp.task('serve', function() {
+module.exports = () => {
+  $.gulp.task('serve', () => {
     $.browserSync.init({
       open: false,
-      server: $.config.build
+      server: $.config.build,
     });
-    $.browserSync.watch([$.config.build + '/**/*.*', '!**/*.css'], $.browserSync.reload);
+    $.browserSync.watch(
+      [`${$.config.build}/**/*.*`, `!**/*.css`],
+      $.browserSync.reload
+    );
   });
 };

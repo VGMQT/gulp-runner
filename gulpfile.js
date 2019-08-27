@@ -1,35 +1,32 @@
-'use strict';
+/* eslint-disable */
 
 global.$ = {
   gulp: require('gulp'),
   gp: require('gulp-load-plugins')(),
   config: require('./gulp/configs/config'),
   path: {
-    tasks: require('./gulp/configs/tasks.js')
+    tasks: require('./gulp/configs/tasks.js'),
   },
 
   browserSync: require('browser-sync').create(),
   del: require('del'),
   exec: require('child_process').exec,
   fs: require('fs'),
-  merge: require('merge-stream')
+  merge: require('merge-stream'),
 };
 
 $.path.tasks.forEach(function(taskPath) {
   require(taskPath)();
 });
 
-$.gulp.task('build',
+$.gulp.task(
+  'build',
   $.gulp.series(
     'clean',
 
-    $.gulp.parallel(
-      'images:sprite',
-      'svg:sprite',
-    ),
+    $.gulp.parallel('images:sprite', 'svg:sprite'),
 
-    'images:minify',
-    'sass:lint',
+    $.gulp.parallel('images:minify', 'sass:lint', 'js:lint'),
 
     $.gulp.parallel(
       // 'html',
@@ -45,13 +42,11 @@ $.gulp.task('build',
   )
 );
 
-$.gulp.task('default',
+$.gulp.task(
+  'default',
   $.gulp.series(
     'build',
 
-    $.gulp.parallel(
-      'watch',
-      'serve'
-    )
+    $.gulp.parallel('watch', 'serve')
   )
 );

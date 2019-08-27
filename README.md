@@ -1,7 +1,9 @@
 # Gulp tasker v.1.3.1
+
 > "gulp": "^4.0.2"
 
 #### Content
+
 **[How to launch](#how-to-launch)**  
 **[What is this?](#what-is-this)**  
 **[Contained tasks](#current-131-version-contains-following-tasks)**  
@@ -10,90 +12,94 @@
 
 ### How to launch:
 
-1. ```git clone```
-2. ```yarn``` / ```npm i```
-3. ```yarn global add gulp-cli``` / ```npm i gulp-cli -g```
-4. ```gulp```
+1. `git clone`
+2. `yarn` / `npm i`
+3. `yarn global add gulp-cli` / `npm i gulp-cli -g`
+4. `gulp`
 5. Navigate to your localhost address
-(default is http://localhost:3000/)
+   (default is http://localhost:3000/)
 
 ### What is this?
+
 Gulp tasker is an easy editable gulp build with a flexible and convenient choice of the tasks to run.
 
-Some of the tasks are doing the same job, but with a different conditions. Such duplicates are disabled (commented) in ```gulpfile.js```.
+Some of the tasks are doing the same job, but with a different conditions. Such duplicates are disabled (commented) in `gulpfile.js`.
 For example:
-1. If you are using ```pug``` instead of ```html``` — you should disable **html** task and enable **pug**
-2. If you do not want to minify your custom ```js``` files — you should disable **js:app-minify** and enable **js:app**
+
+1. If you are using `pug` instead of `html` — you should disable **html** task and enable **pug**
+2. If you do not want to minify your custom `js` files — you should disable **js:app-minify** and enable **js:app**
 
 ### Current (1.3.1) version contains following tasks:
-* **clean**
 
-  Deletes the ```build``` folder
+- **clean**
 
-* **images:sprite**
+  Deletes the `build` folder
 
-  Creates a sprite from ```.png``` files placed in the ```images/sprites/png``` folder and moves it to the ```build/images/sprites``` folder
+- **images:sprite**
 
-* **svg:sprite**
+  Creates a sprite from `.png` files placed in the `images/sprites/png` folder and moves it to the `build/images/sprites` folder
 
-  Creates a sprite from ```.svg``` files placed in the ```images/sprites/svg``` folder and moves it to the ```build/images/sprites``` folder
+- **svg:sprite**
 
-* **images:minify**
+  Creates a sprite from `.svg` files placed in the `images/sprites/svg` folder and moves it to the `build/images/sprites` folder
 
-    Minifies all images (and sprites) from the ```dev/images``` folder. Triggered only once per gulp run (can be launched manually)
+- **images:minify**
 
-* **sass:lint**
+  Minifies all images (and sprites) from the `dev/images` folder. Triggered only once per gulp run (can be launched manually)
 
-    Lints all ```.scss``` files at the ```dev/styles``` folder with [stylelint](https://stylelint.io/) using config from ```.stylelintrc```
+- **sass:lint**
 
-* **html**
+  Lints all `.scss` files at the `dev/styles` folder with [stylelint](https://stylelint.io/) using config from `.stylelintrc`
 
-  Copies all ```html``` files from the ```dev``` folder to the ```build``` folder
+- **html**
 
-* **pug**
+  Copies all `html` files from the `dev` folder to the `build` folder
 
-  Compiles all ```pug``` files from the ```pug/pages``` folder to the ```build``` folder
-  
-  ```locals: JSON.parse($.fs.readFileSync('content.json', 'utf8'))``` can be enabled for using ```content.json``` as ```locals``` (global variables for pug)
+- **pug**
 
-* **css:vendor**
+  Compiles all `pug` files from the `pug/pages` folder to the `build` folder
 
-  Merges and minimizes all vendor ```css``` files, which paths are declared in ```gulp/configs/config.js```, and moves the resulting ```vendor.min.css``` file to the ```build/css``` folder
+  `locals: JSON.parse($.fs.readFileSync('content.json', 'utf8'))` can be enabled for using `content.json` as `locals` (global variables for pug)
 
-* **sass**
+- **css:vendor**
 
-  Compiles, prefixes css properties as indicated in ```gulp/configs/config.js``` and minimizes the ```main.scss``` file from the ```styles``` folder to the ```build``` folder
+  Merges and minimizes all vendor `css` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `vendor.min.css` file to the `build/css` folder
 
-* **js:vendor**
+- **sass**
 
-  Merges and minimizes all vendor ```js``` files, which paths are declared in ```gulp/configs/config.js```, and moves the resulting ```vendor.min.js``` file to the ```build/js``` folder
+  Compiles, prefixes css properties as indicated in `gulp/configs/config.js` and minimizes the `main.scss` file from the `styles` folder to the `build` folder
 
-* **js:app**
+- **js:vendor**
 
-  Merges all custom ```js``` files, which paths are declared in ```gulp/configs/config.js```, and moves the resulting ```app.js``` file to the ```build/js``` folder
+  Merges and minimizes all vendor `js` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `vendor.min.js` file to the `build/js` folder
 
-* **js:app-minify**
+- **js:app**
 
-  Merges and minimizes all custom ```js``` files, which paths are declared in ```gulp/configs/config.js```, and moves the resulting ```app.min.js``` file to the ```build/js``` folder
+  Merges all custom `js` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `app.js` file to the `build/js` folder
 
-* **fonts**
+- **js:app-minify**
 
-  Copies all files from the ```dev/fonts``` folder to the ```build/fonts``` folder
+  Merges and minimizes all custom `js` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `app.min.js` file to the `build/js` folder
 
-* **images**
+- **fonts**
 
-  Copies all files from the ```dev/images``` folder to the ```build/images``` folder, except the ```dev/images/sprites``` folder
+  Copies all files from the `dev/fonts` folder to the `build/fonts` folder
 
-* **watch**
+- **images**
+
+  Copies all files from the `dev/images` folder to the `build/images` folder, except the `dev/images/sprites` folder
+
+- **watch**
 
   Watches for the specific files and executes needed task on change
 
-* **serve**
+- **serve**
 
   Launches and configures browserSync
-  
+
 ### Dependencies
-You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``` as *Gulp tasker* will always be ok working with the latest versions of the dependencies, so it is **strongly recommended**.
+
+You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gulp tasker_ will always be ok working with the latest versions of the dependencies, so it is **strongly recommended**.
 
 ```
 "devDependencies": {
@@ -135,6 +141,7 @@ You **should** ```yarn upgrade --latest``` / ```npm update && npm audit fix -f``
 ```
 
 ### License
-Copyright © 2018 - 2019, based on Loftschool 2017 Web Advanced course build.
+
+Copyright © 2018 - 2019, based on © Loftschool 2017 Web Advanced course build.
 
 Licensed under the MIT license.

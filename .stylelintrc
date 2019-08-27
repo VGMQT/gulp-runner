@@ -3,6 +3,7 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "at-rule-no-unknown": null,
+    "color-hex-length": "long",
     "declaration-empty-line-before": "never",
     "no-descending-specificity": null,
     "selector-pseudo-class-no-unknown": null,

@@ -1,13 +1,17 @@
-'use strict';
-
-module.exports = function() {
-  $.gulp.task('watch', function() {
-    // $.gulp.watch($.config.dev + '/js/**/*.js', $.gulp.series('js:app'));
-    $.gulp.watch($.config.dev + '/js/**/*.js', $.gulp.series('js:app-minify'));
-    $.gulp.watch([$.config.dev + '/styles/**/*.scss', $.config.dev + '/styles/**/*.sass'], $.gulp.series('sass:lint', 'sass'));
-    // $.gulp.watch($.config.dev + '/*.html', $.gulp.series('html'));
-    $.gulp.watch($.config.dev + '/pug/**/*.pug', $.gulp.series('pug'));
-    $.gulp.watch($.config.dev + '/fonts/**/*.*', $.gulp.series('fonts'));
-    $.gulp.watch($.config.dev + '/images/**/*.*', $.gulp.series('images'));
+module.exports = () => {
+  $.gulp.task('watch', () => {
+    // $.gulp.watch(`${$.config.dev}/js/**/*.js`, $.gulp.series('js:lint', 'js:app'));
+    $.gulp.watch(
+      `${$.config.dev}/js/**/*.js`,
+      $.gulp.series('js:lint', 'js:app-minify')
+    );
+    $.gulp.watch(
+      [`${$.config.dev}/styles/**/*.scss`, `${$.config.dev}/styles/**/*.sass`],
+      $.gulp.series('sass:lint', 'sass')
+    );
+    // $.gulp.watch(`${$.config.dev}/*.html`, $.gulp.series('html'));
+    $.gulp.watch(`${$.config.dev}/pug/**/*.pug`, $.gulp.series('pug'));
+    $.gulp.watch(`${$.config.dev}/fonts/**/*.*`, $.gulp.series('fonts'));
+    $.gulp.watch(`${$.config.dev}/images/**/*.*`, $.gulp.series('images'));
   });
 };
