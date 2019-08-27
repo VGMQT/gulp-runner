@@ -7,6 +7,7 @@ module.exports = [
   './gulp/tasks/pug.js',
   './gulp/tasks/css.vendor.js',
   './gulp/tasks/sass.js',
+  './gulp/tasks/sass.lint.js',
   './gulp/tasks/js.vendor.js',
   './gulp/tasks/js.app.js',
   './gulp/tasks/js.app-minify.js',

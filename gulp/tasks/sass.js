@@ -6,7 +6,7 @@ module.exports = function() {
       .pipe($.gp.sourcemaps.init())
       .pipe($.gp.sassGlob())
       .pipe($.gp.sass()).on('error', $.gp.notify.onError({ title: 'Styles' }))
-      .pipe($.gp.autoprefixer({ browsers: $.config.prefixBrowsers }))
+      .pipe($.gp.autoprefixer())
       .pipe($.gp.csso())
       .pipe($.gp.sourcemaps.write())
       .pipe($.gp.rename('main.min.css'))

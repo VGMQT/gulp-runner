@@ -2,15 +2,17 @@
 
 global.$ = {
   gulp: require('gulp'),
+  gp: require('gulp-load-plugins')(),
+  config: require('./gulp/configs/config'),
   path: {
     tasks: require('./gulp/configs/tasks.js')
   },
-  config: require('./gulp/configs/config'),
-  gp: require('gulp-load-plugins')(),
-  del: require('del'),
+
   browserSync: require('browser-sync').create(),
-  merge: require('merge-stream'),
-  fs: require('fs')
+  del: require('del'),
+  exec: require('child_process').exec,
+  fs: require('fs'),
+  merge: require('merge-stream')
 };
 
 $.path.tasks.forEach(function(taskPath) {
@@ -27,6 +29,7 @@ $.gulp.task('build',
     ),
 
     'images:minify',
+    'sass:lint',
 
     $.gulp.parallel(
       // 'html',
