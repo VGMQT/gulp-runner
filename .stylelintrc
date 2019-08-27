@@ -108,7 +108,8 @@
       "transition-delay",
 
       "content",
-      "cursor"
+      "cursor",
+      "user-select"
     ],
     "order/order": [
       {
