@@ -4,7 +4,7 @@
 #### Content
 **[How to launch](#how-to-launch)**  
 **[What is this?](#what-is-this)**  
-**[Contained tasks](#what-is-this)**  
+**[Contained tasks](#current-130-version-contains-following-tasks)**  
 **[Dependencies](#dependencies)**  
 **[License](#license)**
 
