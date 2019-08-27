@@ -2,11 +2,11 @@
 > "gulp": "^4.0.2"
 
 #### Content
-**[How to launch](#markdown-header-how-to-launch)**  
-**[What is this?](#markdown-header-what-is-this)**  
-**[Contained tasks](#markdown-header-what-is-this)**  
-**[Dependencies](#markdown-header-dependencies)**  
-**[License](#markdown-header-license)**
+**[How to launch](#how-to-launch)**  
+**[What is this?](#what-is-this)**  
+**[Contained tasks](#what-is-this)**  
+**[Dependencies](#dependencies)**  
+**[License](#license)**
 
 ### How to launch:
 
