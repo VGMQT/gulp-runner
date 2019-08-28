@@ -110,6 +110,7 @@
 
       "content",
       "cursor",
+      "pointer-events",
       "user-select"
     ],
     "order/order": [
