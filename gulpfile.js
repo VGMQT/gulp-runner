@@ -20,33 +20,35 @@ $.path.tasks.forEach(function(taskPath) {
 });
 
 $.gulp.task(
-  'build',
-  $.gulp.series(
-    'clean',
-
-    $.gulp.parallel('images:sprite', 'svg:sprite'),
-
-    $.gulp.parallel('images:minify', 'sass:lint', 'js:lint'),
-
-    $.gulp.parallel(
-      // 'html',
-      'pug',
-      'css:vendor',
-      'sass',
-      'js:vendor',
-      // 'js:app',
-      'js:app-minify',
-      'fonts',
-      'images'
-    )
+  'core',
+  $.gulp.parallel(
+    // 'html',
+    'pug',
+    'css:vendor',
+    'sass',
+    'js:vendor',
+    // 'js:app',
+    'js:app-minify',
+    'fonts',
+    'images'
   )
+);
+
+$.gulp.task(
+  'core:images',
+  $.gulp.series('images:minify', $.gulp.parallel('images:sprite', 'svg:sprite'))
 );
 
 $.gulp.task(
   'default',
   $.gulp.series(
-    'build',
-
+    'clean',
+    'js:lint',
+    'sass:lint',
+    'core:images',
+    'core',
     $.gulp.parallel('watch', 'serve')
   )
 );
+
+$.gulp.task('build', $.gulp.series('clean', 'core:images', 'core'));

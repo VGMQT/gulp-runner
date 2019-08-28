@@ -1,4 +1,4 @@
-# Gulp tasker v.2.0.0
+# Gulp tasker v.2.0.1
 
 > "gulp": "^4.0.2"
 
@@ -6,7 +6,7 @@
 
 **[How to launch](#how-to-launch)**  
 **[What is this?](#what-is-this)**  
-**[Contained tasks](#current-200-version-contains-following-tasks)**  
+**[Contained tasks](#current-201-version-contains-following-tasks)**  
 **[Pre-commit](#pre-commit)**  
 **[Dependencies](#dependencies)**  
 **[License](#license)**
@@ -14,10 +14,11 @@
 ## How to launch:
 
 1. `git clone`
-2. `yarn` / `npm i`
-3. `yarn global add gulp-cli` / `npm i gulp-cli -g`
-4. `gulp`
-5. Navigate to your localhost address
+2. `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` to update remote with your own repository / `git remote rm origin` to remove remote
+3. `yarn` / `npm i`
+4. `yarn global add gulp-cli` / `npm i gulp-cli -g`
+5. `gulp`
+6. Navigate to your localhost address
    (default is http://localhost:3000/)
 
 ## What is this?
@@ -30,7 +31,7 @@ For example:
 1. If you are using `pug` instead of `html` — you should disable **html** task and enable **pug**
 2. If you do not want to minify your custom `js` files — you should disable **js:app-minify** and enable **js:app**
 
-## Current (2.0.0) version contains following tasks:
+## Current (2.0.1) version contains following tasks:
 
 - **clean**
 
