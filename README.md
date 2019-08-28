@@ -1,16 +1,17 @@
-# Gulp tasker v.1.3.1
+# Gulp tasker v.2.0.0
 
 > "gulp": "^4.0.2"
 
-#### Content
+### Content
 
 **[How to launch](#how-to-launch)**  
 **[What is this?](#what-is-this)**  
-**[Contained tasks](#current-131-version-contains-following-tasks)**  
+**[Contained tasks](#current-200-version-contains-following-tasks)**  
+**[Pre-commit](#pre-commit)**  
 **[Dependencies](#dependencies)**  
 **[License](#license)**
 
-### How to launch:
+## How to launch:
 
 1. `git clone`
 2. `yarn` / `npm i`
@@ -19,7 +20,7 @@
 5. Navigate to your localhost address
    (default is http://localhost:3000/)
 
-### What is this?
+## What is this?
 
 Gulp tasker is an easy editable gulp build with a flexible and convenient choice of the tasks to run.
 
@@ -29,7 +30,7 @@ For example:
 1. If you are using `pug` instead of `html` — you should disable **html** task and enable **pug**
 2. If you do not want to minify your custom `js` files — you should disable **js:app-minify** and enable **js:app**
 
-### Current (1.3.1) version contains following tasks:
+## Current (2.0.0) version contains following tasks:
 
 - **clean**
 
@@ -49,7 +50,11 @@ For example:
 
 - **sass:lint**
 
-  Lints all `.scss` files at the `dev/styles` folder with [stylelint](https://stylelint.io/) using config from `.stylelintrc`
+  Lints all `.{scss,sass,css}` files at the `dev/styles` folder with [stylelint](https://stylelint.io/) using config from `.stylelintrc`
+
+- **js:lint**
+
+  Makes all `.js` files at the `dev/js` folder [Prettier](https://prettier.io/) and lints them with [ESlint](https://eslint.org/) using configs from `.prettierrc` and `.eslintrc`
 
 - **html**
 
@@ -97,7 +102,30 @@ For example:
 
   Launches and configures browserSync
 
-### Dependencies
+## Pre-commit
+
+From the 2.0.0 version _Gulp tasker_ has a pre-commit script, based on [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged). It looks like this:
+
+```
+"lint-staged": {
+    "dev/**/*.js": [
+      "pretty-quick",
+      "eslint 'dev/**/*.js' --fix"
+    ],
+    "dev/**/*.{scss,sass,css}": [
+      "stylelint 'dev/**/*.{scss,sass,css}' --fix"
+    ]
+},
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && gulp build && git add ."
+    }
+}
+```
+
+And it can be configured in any preferrable way. Enjoy!
+
+## Dependencies
 
 You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gulp tasker_ will always be ok working with the latest versions of the dependencies, so it is **strongly recommended**.
 
@@ -105,9 +133,15 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
     "browser-sync": "^2.26.7",
     "child_process": "^1.0.2",
     "del": "~5.1.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "~7.0.0",
@@ -129,7 +163,11 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
     "gulp-svg-sprite": "~1.5.0",
     "gulp-svgmin": "~2.2.0",
     "gulp.spritesmith": "^6.10.1",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0",
     "merge-stream": "^2.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.1"
@@ -137,10 +175,10 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 "dependencies": {
     "jquery": "~3.4.1",
     "normalize.css": "~8.0.1"
-}
+},
 ```
 
-### License
+## License
 
 Copyright © 2018 - 2019, based on © Loftschool 2017 Web Advanced course build.
 

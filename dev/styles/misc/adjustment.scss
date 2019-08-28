@@ -1,0 +1,127 @@
+// Local variables
+$container_width: 1550px;
+//--
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $main_color;
+  background-color: $accent_color;
+}
+
+html {
+  // Stick the footer with a dynamic height to the bottom of a page
+  height: 100%;
+  //-
+  font-size: 16px;
+}
+
+html,
+body {
+  @include font(400);
+  width: 100%;
+}
+
+body {
+  // Stick the footer with a dynamic height to the bottom of a page
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  //-
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: $container_width;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+blockquote {
+  margin: 0;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input {
+  &[type='checkbox'],
+  &[type='radio'] {
+    cursor: pointer;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  // Stick the footer with a dynamic height to the bottom of a page
+  margin-top: auto;
+  //-
+}

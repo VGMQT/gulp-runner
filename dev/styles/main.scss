@@ -1,6 +1,9 @@
+// Misc
+@import 'misc/variables';
+@import 'misc/fonts';
+@import 'misc/mixins';
+@import 'misc/adjustment';
 @import 'misc/sprite';
-@import 'modules/greeting';
 
-body {
-  margin: 0;
-}
+// Modules
+@import 'modules/greeting';

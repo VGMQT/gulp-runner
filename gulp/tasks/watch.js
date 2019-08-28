@@ -6,7 +6,7 @@ module.exports = () => {
       $.gulp.series('js:lint', 'js:app-minify')
     );
     $.gulp.watch(
-      [`${$.config.dev}/styles/**/*.scss`, `${$.config.dev}/styles/**/*.sass`],
+      `${$.config.dev}/styles/**/*.{scss,sass,css}`,
       $.gulp.series('sass:lint', 'sass')
     );
     // $.gulp.watch(`${$.config.dev}/*.html`, $.gulp.series('html'));

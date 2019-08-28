@@ -1,5 +1,5 @@
 (() => {
   setTimeout(() => {
-    document.querySelector('.greeting_picture').classList.add('m--show');
+    document.querySelector('.greeting__picture').classList.add('m--show');
   }, 1000);
 })();
