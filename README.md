@@ -1,4 +1,4 @@
-# Gulp tasker v.2.0.1
+# Gulp tasker v.2.0.2
 
 > "gulp": "^4.0.2"
 
@@ -6,7 +6,7 @@
 
 **[How to launch](#how-to-launch)**  
 **[What is this?](#what-is-this)**  
-**[Contained tasks](#current-201-version-contains-following-tasks)**  
+**[Contained tasks](#current-202-version-contains-following-tasks)**  
 **[Pre-commit](#pre-commit)**  
 **[Dependencies](#dependencies)**  
 **[License](#license)**
@@ -31,7 +31,7 @@ For example:
 1. If you are using `pug` instead of `html` — you should disable **html** task and enable **pug**
 2. If you do not want to minify your custom `js` files — you should disable **js:app-minify** and enable **js:app**
 
-## Current (2.0.1) version contains following tasks:
+## Current (2.0.2) version contains following tasks:
 
 - **clean**
 
