@@ -21,11 +21,11 @@
 6. Navigate to your localhost address
    (default is http://localhost:3000/)
    
-P.S. Don't forget to remove extra info like keywords, repository and etc. from package.json
+P.S. Don't forget to remove extra info like keywords, repository and etc. from `package.json`.
 
 ## What is this?
 
-Gulp tasker is an easy editable gulp build with a flexible and convenient choice of the tasks to run.
+_Gulp tasker_ is an easy editable gulp build with a flexible and convenient choice of the tasks to run.
 
 Some of the tasks are doing the same job, but with a different conditions. Such duplicates are disabled (commented) in `gulpfile.js`.
 For example:
@@ -178,7 +178,7 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 "dependencies": {
     "jquery": "~3.4.1",
     "normalize.css": "~8.0.1"
-},
+}
 ```
 
 ## License
