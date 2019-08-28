@@ -20,6 +20,8 @@
 5. `gulp`
 6. Navigate to your localhost address
    (default is http://localhost:3000/)
+   
+P.S. Don't forget to remove extra info like keywords, repository and etc. from package.json
 
 ## What is this?
 
