@@ -14,7 +14,7 @@
 ## How to launch:
 
 1. `git clone`
-2. `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` to update remote with your own repository / `git remote rm origin` to remove remote
+2. `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` to update the origin remote with your own repository / `git remote rm origin` to remove the origin remote
 3. `yarn` / `npm i`
 4. `yarn global add gulp-cli` / `npm i gulp-cli -g`
 5. `gulp`
