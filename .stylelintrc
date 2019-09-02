@@ -5,6 +5,7 @@
     "at-rule-no-unknown": null,
     "color-hex-length": "long",
     "declaration-empty-line-before": "never",
+    "length-zero-no-unit": null,
     "no-descending-specificity": null,
     "selector-pseudo-class-no-unknown": null,
     "order/properties-order": [
