@@ -163,27 +163,24 @@
       },
       {
         "type": "rule",
-        "selector": "^&:first-(child|of-type)"
-      },
-      {
-        "type": "rule",
-        "selector": "^&:last-(child|of-type)"
-      },
-      {
-        "type": "rule",
-        "selector": "^&:nth-((last-)*(child|of-type))"
-      },
-      {
-        "type": "rule",
-        "selector": "^&:o(nly-(child|of-type))"
+        "selector": "^&:out-of-range|^&:r(e(ad-(only|write)))"
       },
       {
         "type": "rule",
         "selector": "^&:\\w"
       },
+
       {
         "type": "rule",
-        "selector": "^&:out-of-range|^&:r(e(ad-(only|write)))"
+        "selector": "&::before"
+      },
+      {
+        "type": "rule",
+        "selector": "&::after"
+      },
+      {
+        "type": "rule",
+        "selector": "^&::\\w"
       },
 
       {
@@ -213,15 +210,19 @@
 
       {
         "type": "rule",
-        "selector": "&::before"
+        "selector": "^&:first-(child|of-type)"
       },
       {
         "type": "rule",
-        "selector": "&::after"
+        "selector": "^&:nth-((last-)*(child|of-type))"
       },
       {
         "type": "rule",
-        "selector": "^&::\\w"
+        "selector": "^&:last-(child|of-type)"
+      },
+      {
+        "type": "rule",
+        "selector": "^&:o(nly-(child|of-type))"
       },
       {
         "type": "rule",
