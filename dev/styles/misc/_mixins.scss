@@ -76,7 +76,7 @@
 
 // Fonts
 @function rem($px) {
-  @return $px / 16px + 0;
+  @return $px / 16px + 0rem;
 }
 
 @mixin font($style: 400) {
