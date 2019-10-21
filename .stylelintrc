@@ -2,6 +2,12 @@
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-order"],
   "rules": {
+    "at-rule-empty-line-before": ["always", {
+      "except": [
+        "blockless-after-blockless",
+        "first-nested"
+      ]
+    }],
     "at-rule-no-unknown": null,
     "color-hex-length": "long",
     "declaration-empty-line-before": "never",
@@ -166,9 +172,30 @@
         "type": "rule",
         "selector": "^&:out-of-range|^&:r(e(ad-(only|write)))"
       },
+
       {
-        "type": "rule",
-        "selector": "^&:\\w"
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "tablet",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "laptop",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "desktop",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "parameter": "retina",
+        "hasBlock": true
       },
 
       {
@@ -182,31 +209,6 @@
       {
         "type": "rule",
         "selector": "^&::\\w"
-      },
-
-      {
-        "type": "at-rule",
-        "name": "include",
-        "parameter": "laptop",
-        "hasBlock": true
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "parameter": "tablet",
-        "hasBlock": true
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "parameter": "mobile",
-        "hasBlock": true
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "parameter": "retina",
-        "hasBlock": true
       },
 
       {
@@ -228,6 +230,18 @@
       {
         "type": "rule",
         "selector": "^&_"
+      },
+      {
+        "type": "rule",
+        "selector": "^&."
+      },
+      {
+        "type": "rule",
+        "selector": "^&__"
+      },
+      {
+        "type": "rule",
+        "selector": "^&-"
       },
       {
         "type": "rule",
