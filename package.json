@@ -4,7 +4,7 @@
   "description": "An easy editable gulp build with a flexible and convenient choice of tasks to run",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VGMQT/gulp-tasker.git"
+    "url": "https://github.com/VGMQT/gulp-tasker.git"
   },
   "keywords": [
     "gulp",
@@ -14,9 +14,6 @@
   "author": "Vlad Gerasimovich <vlad.gerasimovich.dev@gmail.com>",
   "license": "MIT",
   "bugs": "https://github.com/VGMQT/gulp-tasker/issues",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
