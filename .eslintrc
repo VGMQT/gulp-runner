@@ -3,7 +3,11 @@
   "plugins": ["prettier"],
   "rules": {
     "camelcase": 0,
+    "func-names": 0,
+    "no-plusplus": 0,
+    "no-undef": 0,
     "no-underscore-dangle": 0,
+    "no-unused-vars": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
 

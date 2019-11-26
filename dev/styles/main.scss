@@ -6,4 +6,7 @@
 @import 'misc/sprite';
 
 // Modules
-@import 'modules/greeting';
+@import 'modules/**/*';
+
+// Top level modificators
+@import 'misc/modificators'

@@ -6,11 +6,15 @@
       "except": [
         "blockless-after-blockless",
         "first-nested"
+      ],
+      "ignore": [
+        "after-comment"
       ]
     }],
     "at-rule-no-unknown": null,
     "color-hex-length": "long",
     "declaration-empty-line-before": "never",
+    "font-family-no-missing-generic-family-keyword": null,
     "length-zero-no-unit": null,
     "no-descending-specificity": null,
     "number-leading-zero": "never",
