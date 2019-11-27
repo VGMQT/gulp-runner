@@ -21,7 +21,7 @@
 6. Navigate to your localhost address
    (default is http://localhost:3000/)
    
-P.S. Don't forget to remove extra info like keywords, repository and etc. from `package.json`.
+P.S. Don't forget to remove extra info like keywords, repository, etc. from `package.json`.
 
 ## What is this?
 
@@ -149,10 +149,10 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp": "^4.0.2",
   "gulp-autoprefixer": "~7.0.0",
   "gulp-babel": "^8.0.0",
-  "gulp-cheerio": "~0.6.2",
+  "gulp-cheerio": "~1.0.0",
   "gulp-concat": "~2.6.1",
   "gulp-concat-css": "~3.1.0",
-  "gulp-csso": "^3.0.1",
+  "gulp-csso": "^4.0.1",
   "gulp-imagemin": "^6.1.0",
   "gulp-load-plugins": "~2.0.1",
   "gulp-minify": "^3.1.0",
@@ -167,12 +167,12 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-svgmin": "~2.2.0",
   "gulp.spritesmith": "^6.10.1",
   "husky": "^3.0.0",
-  "lint-staged": "^9.2.0",
+  "lint-staged": "^9.5.0",
   "merge-stream": "^2.0.0",
   "prettier": "^1.18.2",
-  "pretty-quick": "^1.11.1",
-  "stylelint": "^10.1.0",
-  "stylelint-config-standard": "^18.3.0",
+  "pretty-quick": "^2.0.1",
+  "stylelint": "^12.0.0",
+  "stylelint-config-standard": "^19.0.0",
   "stylelint-order": "^3.0.1"
 },
 "dependencies": {
