@@ -183,6 +183,6 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 
 ## License
 
-Copyright © 2018 - 2019, based on © Loftschool 2017 Web Advanced course build.
+Copyright © 2018 - 2020, based on © Loftschool 2017 Web Advanced course build.
 
 Licensed under the MIT license.

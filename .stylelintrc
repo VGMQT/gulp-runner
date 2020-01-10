@@ -231,13 +231,14 @@
         "type": "rule",
         "selector": "^&:o(nly-(child|of-type))"
       },
+
       {
         "type": "rule",
-        "selector": "^&_"
+        "selector": "^&_[^_][\\w'-]+"
       },
       {
         "type": "rule",
-        "selector": "^&."
+        "selector": "^&\\."
       },
       {
         "type": "rule",
