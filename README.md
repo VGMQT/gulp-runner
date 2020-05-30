@@ -1,4 +1,4 @@
-# Gulp tasker v.2.0.3
+# Gulp tasker v.2.1.0
 
 > "gulp": "^4.0.2"
 
@@ -20,7 +20,7 @@
 5. `gulp`
 6. Navigate to your localhost address
    (default is http://localhost:3000/)
-   
+
 P.S. Don't forget to remove extra info like keywords, repository, etc. from `package.json`.
 
 ## What is this?

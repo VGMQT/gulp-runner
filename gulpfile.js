@@ -13,6 +13,8 @@ global.$ = {
   exec: require('child_process').exec,
   fs: require('fs'),
   merge: require('merge-stream'),
+  compiler: require('webpack'),
+  webpack: require('webpack-stream'),
 };
 
 $.path.tasks.forEach(function(taskPath) {

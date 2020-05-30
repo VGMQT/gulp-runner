@@ -1,5 +1,3 @@
-(() => {
-  setTimeout(() => {
-    document.querySelector('.greeting__picture').classList.add('m--show');
-  }, 1000);
-})();
+import addClassnameAfterDelay from './modules/common/addClassnameAfterDelay';
+
+addClassnameAfterDelay('.greeting__picture', 'm--show');
