@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 global.$ = {
   gulp: require('gulp'),
   gp: require('gulp-load-plugins')(),
@@ -17,7 +15,7 @@ global.$ = {
   webpack: require('webpack-stream'),
 };
 
-$.path.tasks.forEach(function(taskPath) {
+$.path.tasks.forEach(function (taskPath) {
   require(taskPath)();
 });
 
@@ -28,7 +26,7 @@ $.gulp.task(
     'pug',
     'css:vendor',
     'sass',
-    'js:vendor',
+    // 'js:vendor',
     // 'js:app',
     'js:app-minify',
     'fonts',
