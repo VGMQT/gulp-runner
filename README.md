@@ -1,14 +1,14 @@
-# Gulp tasker v.2.1.0
+# Gulp tasker v.2.1.1
 
 > "gulp": "^4.0.2"
 
 ### Content
 
-**[How to launch](#how-to-launch)**  
-**[What is this?](#what-is-this)**  
-**[Contained tasks](#current-version-contains-following-tasks)**  
-**[Pre-commit](#pre-commit)**  
-**[Dependencies](#dependencies)**  
+**[How to launch](#how-to-launch)**
+**[What is this?](#what-is-this)**
+**[Contained tasks](#current-version-contains-following-tasks)**
+**[Pre-commit](#pre-commit)**
+**[Dependencies](#dependencies)**
 **[License](#license)**
 
 ## How to launch:

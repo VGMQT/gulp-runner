@@ -1,6 +1,6 @@
 {
   "name": "@vgmqt/gulp-tasker",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "An easy editable gulp build with a flexible and convenient choice of tasks to run",
   "repository": {
     "type": "git",
