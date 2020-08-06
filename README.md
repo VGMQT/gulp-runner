@@ -1,4 +1,4 @@
-# Gulp tasker v.2.1.1
+# Gulp tasker v.2.2.0
 
 > "gulp": "^4.0.2"
 
@@ -164,7 +164,7 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-sass-glob": "^1.1.0",
   "gulp-sourcemaps": "~2.6.5",
   "gulp-svg-sprite": "~1.5.0",
-  "gulp-svgmin": "~2.2.0",
+  "gulp-svgmin": "~3.0.0",
   "gulp.spritesmith": "^6.10.1",
   "husky": "^4.2.5",
   "lint-staged": "^10.2.7",

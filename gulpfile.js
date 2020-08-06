@@ -1,3 +1,5 @@
+/* eslint-disable global-require, import/no-dynamic-require */
+
 global.$ = {
   gulp: require('gulp'),
   gp: require('gulp-load-plugins')(),
