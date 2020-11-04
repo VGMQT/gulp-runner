@@ -67,6 +67,9 @@
       "pretty-quick --pattern './dev/js/**/*.js'",
       "eslint './dev/js/**/*.js' --fix"
     ],
+    "dev/pug/**/*.pug": [
+      "pretty-quick --pattern './dev/pug/**/*.pug'"
+    ],
     "dev/**/*.{scss,sass,css}": [
       "stylelint './dev/styles/**/*.{scss,sass,css}' --fix"
     ]
