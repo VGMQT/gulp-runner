@@ -1,4 +1,4 @@
-# Gulp tasker v.2.2.0
+# Gulp tasker v.2.3.0
 
 > "gulp": "^4.0.2"
 
@@ -134,27 +134,28 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 
 ```
 "devDependencies": {
-  "@babel/core": "^7.10.1",
-  "@babel/preset-env": "^7.10.1",
+  "@babel/core": "^7.12.3",
+  "@babel/preset-env": "^7.12.1",
+  "@prettier/plugin-pug": "^1.10.1",
   "babel-eslint": "^10.1.0",
-  "browser-sync": "^2.26.7",
+  "browser-sync": "^2.26.13",
   "child_process": "^1.0.2",
-  "del": "~5.1.0",
-  "eslint": "^7.1.0",
-  "eslint-config-airbnb-base": "^14.1.0",
-  "eslint-config-prettier": "^6.11.0",
-  "eslint-plugin-import": "^2.20.2",
-  "eslint-plugin-prettier": "^3.1.3",
+  "del": "~6.0.0",
+  "eslint": "^7.12.1",
+  "eslint-config-airbnb-base": "^14.2.0",
+  "eslint-config-prettier": "^6.15.0",
+  "eslint-plugin-import": "^2.22.1",
+  "eslint-plugin-prettier": "^3.1.4",
   "fs": "^0.0.1-security",
   "gulp": "^4.0.2",
-  "gulp-autoprefixer": "~7.0.0",
+  "gulp-autoprefixer": "~7.0.1",
   "gulp-babel": "^8.0.0",
   "gulp-cheerio": "~1.0.0",
   "gulp-concat": "~2.6.1",
   "gulp-concat-css": "~3.1.0",
   "gulp-csso": "^4.0.1",
   "gulp-imagemin": "^7.1.0",
-  "gulp-load-plugins": "~2.0.3",
+  "gulp-load-plugins": "~2.0.5",
   "gulp-minify": "^3.1.0",
   "gulp-notify": "~3.2.0",
   "gulp-pug": "~4.0.1",
@@ -165,17 +166,17 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-sourcemaps": "~2.6.5",
   "gulp-svg-sprite": "~1.5.0",
   "gulp-svgmin": "~3.0.0",
-  "gulp.spritesmith": "^6.10.1",
-  "husky": "^4.2.5",
-  "lint-staged": "^10.2.7",
+  "gulp.spritesmith": "^6.11.0",
+  "husky": "^4.3.0",
+  "lint-staged": "^10.5.1",
   "merge-stream": "^2.0.0",
-  "prettier": "^2.0.5",
-  "pretty-quick": "^2.0.1",
-  "stylelint": "^13.5.0",
+  "prettier": "^2.1.2",
+  "pretty-quick": "^3.1.0",
+  "stylelint": "^13.7.2",
   "stylelint-config-standard": "^20.0.0",
-  "stylelint-order": "^4.0.0",
-  "webpack": "^4.43.0",
-  "webpack-stream": "^5.2.1"
+  "stylelint-order": "^4.1.0",
+  "webpack": "^5.4.0",
+  "webpack-stream": "^6.1.0"
 },
 "dependencies": {
   "normalize.css": "~8.0.1"
