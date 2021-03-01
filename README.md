@@ -1,4 +1,4 @@
-# Gulp tasker v.2.3.0
+# Gulp tasker v.2.3.1
 
 > "gulp": "^4.0.2"
 
@@ -15,8 +15,8 @@
 
 1. `git clone`
 2. `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` to update the origin remote with your own repository / `git remote rm origin` to remove the origin remote
-3. `yarn` / `npm i`
-4. `yarn global add gulp-cli` / `npm i gulp-cli -g`
+3. `npm i`
+4. `npm i gulp-cli -g`
 5. `gulp`
 6. Navigate to your localhost address
    (default is http://localhost:3000/)
@@ -107,23 +107,29 @@ For example:
 
 ## Pre-commit
 
-From the 2.0.0 version _Gulp tasker_ has a pre-commit script, based on [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged). It looks like this:
+_Gulp tasker_ has a pre-commit script, based on [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged). It looks like this:
+
+**lint-staged** in `package.json`:
 
 ```
-"lint-staged": {
-    "dev/js/**/*.js": [
-      "pretty-quick --pattern './dev/js/**/*.js'",
-      "eslint './dev/js/**/*.js' --fix"
-    ],
-    "dev/**/*.{scss,sass,css}": [
-      "stylelint './dev/styles/**/*.{scss,sass,css}' --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && gulp build && git add ."
-    }
-  }
+{
+  "dev/js/**/*.js": [
+    "pretty-quick --pattern './dev/js/**/*.js'",
+    "eslint './dev/js/**/*.js' --fix"
+  ],
+  "dev/pug/**/*.pug": [
+    "pretty-quick --pattern './dev/pug/**/*.pug'"
+  ],
+  "dev/**/*.{scss,sass,css}": [
+    "stylelint './dev/styles/**/*.{scss,sass,css}' --fix"
+  ]
+}
+```
+
+**pre-commit** in `.husky/pre-commit`:
+
+```
+lint-staged && git add .
 ```
 
 And it can be configured in any preferrable way. Enjoy!
@@ -134,18 +140,18 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 
 ```
 "devDependencies": {
-  "@babel/core": "^7.12.3",
-  "@babel/preset-env": "^7.12.1",
-  "@prettier/plugin-pug": "^1.10.1",
+  "@babel/core": "^7.13.8",
+  "@babel/preset-env": "^7.13.8",
+  "@prettier/plugin-pug": "^1.13.5",
   "babel-eslint": "^10.1.0",
-  "browser-sync": "^2.26.13",
+  "browser-sync": "^2.26.14",
   "child_process": "^1.0.2",
   "del": "~6.0.0",
-  "eslint": "^7.12.1",
-  "eslint-config-airbnb-base": "^14.2.0",
-  "eslint-config-prettier": "^6.15.0",
+  "eslint": "^7.21.0",
+  "eslint-config-airbnb-base": "^14.2.1",
+  "eslint-config-prettier": "^8.1.0",
   "eslint-plugin-import": "^2.22.1",
-  "eslint-plugin-prettier": "^3.1.4",
+  "eslint-plugin-prettier": "^3.3.1",
   "fs": "^0.0.1-security",
   "gulp": "^4.0.2",
   "gulp-autoprefixer": "~7.0.1",
@@ -155,7 +161,7 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-concat-css": "~3.1.0",
   "gulp-csso": "^4.0.1",
   "gulp-imagemin": "^7.1.0",
-  "gulp-load-plugins": "~2.0.5",
+  "gulp-load-plugins": "~2.0.6",
   "gulp-minify": "^3.1.0",
   "gulp-notify": "~3.2.0",
   "gulp-pug": "~4.0.1",
@@ -163,20 +169,20 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-replace": "~1.0.0",
   "gulp-sass": "~4.1.0",
   "gulp-sass-glob": "^1.1.0",
-  "gulp-sourcemaps": "~2.6.5",
+  "gulp-sourcemaps": "~3.0.0",
   "gulp-svg-sprite": "~1.5.0",
   "gulp-svgmin": "~3.0.0",
   "gulp.spritesmith": "^6.11.0",
-  "husky": "^4.3.0",
-  "lint-staged": "^10.5.1",
+  "husky": "^5.1.2",
+  "lint-staged": "^10.5.4",
   "merge-stream": "^2.0.0",
-  "prettier": "^2.1.2",
+  "prettier": "^2.2.1",
   "pretty-quick": "^3.1.0",
-  "stylelint": "^13.7.2",
+  "stylelint": "^13.11.0",
   "stylelint-config-standard": "^20.0.0",
   "stylelint-order": "^4.1.0",
-  "webpack": "^5.4.0",
-  "webpack-stream": "^6.1.0"
+  "webpack": "^5.24.2",
+  "webpack-stream": "^6.1.2"
 },
 "dependencies": {
   "normalize.css": "~8.0.1"
@@ -185,6 +191,6 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
 
 ## License
 
-Copyright © 2018 - 2020, based on © Loftschool 2017 Web Advanced course build.
+Copyright © 2018 - 2021, based on © Loftschool 2017 Web Advanced course build.
 
 Licensed under the MIT license.

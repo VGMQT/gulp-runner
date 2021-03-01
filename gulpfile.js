@@ -17,7 +17,7 @@ global.$ = {
   webpack: require('webpack-stream'),
 };
 
-$.path.tasks.forEach(function (taskPath) {
+$.path.tasks.forEach((taskPath) => {
   require(taskPath)();
 });
 
