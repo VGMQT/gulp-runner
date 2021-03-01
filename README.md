@@ -1,4 +1,4 @@
-# Gulp tasker v.2.3.1
+# Gulp tasker v.2.3.2
 
 > "gulp": "^4.0.2"
 

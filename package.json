@@ -1,6 +1,6 @@
 {
   "name": "@vgerasimovich/gulp-tasker",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "An easy editable gulp build with a flexible and convenient choice of tasks to run",
   "repository": {
     "type": "git",
@@ -61,6 +61,9 @@
   },
   "dependencies": {
     "normalize.css": "~8.0.1"
+  },
+  "scripts": {
+    "prepare": "husky install"
   },
   "lint-staged": {
     "dev/js/**/*.js": [
