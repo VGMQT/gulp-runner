@@ -1,7 +1,7 @@
 module.exports = () => {
-  $.gulp.task('svg:sprite', () => {
-    return $.gulp
-      .src(`${$.config.dev}/images/sprites/svg/*.svg`)
+  $.gulp.task('svg:sprite', () =>
+    $.gulp
+      .src(`${$.config.dev}/images/sprite/*.svg`)
       .pipe(
         $.gp.svgmin({
           js2svg: {
@@ -33,6 +33,6 @@ module.exports = () => {
           },
         })
       )
-      .pipe($.gulp.dest(`${$.config.build}/images/sprites`));
-  });
+      .pipe($.gulp.dest(`${$.config.build}/images`))
+  );
 };

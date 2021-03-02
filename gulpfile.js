@@ -12,7 +12,6 @@ global.$ = {
   del: require('del'),
   exec: require('child_process').exec,
   fs: require('fs'),
-  merge: require('merge-stream'),
   compiler: require('webpack'),
   webpack: require('webpack-stream'),
 };
@@ -27,19 +26,17 @@ $.gulp.task(
     // 'html',
     'pug',
     'css:vendor',
-    'sass',
     // 'js:vendor',
-    // 'js:app',
-    'js:app-minify',
     'fonts',
     'images'
   )
 );
 
-$.gulp.task(
-  'core:images',
-  $.gulp.series('images:minify', $.gulp.parallel('images:sprite', 'svg:sprite'))
-);
+$.gulp.task('core:images', $.gulp.series('images:minify', 'svg:sprite'));
+
+$.gulp.task('jass:dev', $.gulp.parallel('sass', 'js:app-minify'));
+
+$.gulp.task('jass:prod', $.gulp.parallel('sass:prod', 'js:app-minify:prod'));
 
 $.gulp.task(
   'default',
@@ -48,9 +45,12 @@ $.gulp.task(
     'js:lint',
     'sass:lint',
     'core:images',
-    'core',
+    $.gulp.parallel('core', 'jass:dev'),
     $.gulp.parallel('watch', 'serve')
   )
 );
 
-$.gulp.task('build', $.gulp.series('clean', 'core:images', 'core'));
+$.gulp.task(
+  'build',
+  $.gulp.series('clean', 'core:images', $.gulp.parallel('core', 'jass:prod'))
+);

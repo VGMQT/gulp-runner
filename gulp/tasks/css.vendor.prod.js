@@ -1,5 +1,5 @@
 module.exports = () => {
-  $.gulp.task('css:vendor', () =>
+  $.gulp.task('css:vendor:prod', () =>
     $.gulp
       .src($.config.vendorCSS)
       .pipe($.gp.concatCss('vendor.css'))

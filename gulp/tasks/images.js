@@ -1,10 +1,10 @@
 module.exports = () => {
-  $.gulp.task('images', () => {
-    return $.gulp
+  $.gulp.task('images', () =>
+    $.gulp
       .src([
         `${$.config.dev}/images/**/*.*`,
         `!${$.config.dev}/images/sprites/**/**.*`,
       ])
-      .pipe($.gulp.dest(`${$.config.build}/images`));
-  });
+      .pipe($.gulp.dest(`${$.config.build}/images`))
+  );
 };

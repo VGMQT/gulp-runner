@@ -1,4 +1,4 @@
-# Gulp tasker v.2.3.2
+# Gulp tasker v.2.4.0
 
 > "gulp": "^4.0.2"
 
@@ -27,11 +27,8 @@ P.S. Don't forget to remove extra info like keywords, repository, etc. from `pac
 
 _Gulp tasker_ is an easy editable gulp build with a flexible and convenient choice of tasks to run.
 
-Some of the tasks are doing the same job, but with a different conditions. Such duplicates are disabled (commented) in `gulpfile.js`.
-For example:
-
-1. If you use `pug` instead of `html` — you should disable **html** task and enable **pug**
-2. If you do not want to minify your custom `js` files — you should disable **js:app-minify** and enable **js:app**
+1. If you use `html` instead of `pug` — you should disable **pug** task and enable **html**
+2. Uncomment _js:vendor_ in `gulpfile.js` and `vendor.min.js` in `_layout.pug`, if you plan to use it
 
 ## Current version contains following tasks:
 
@@ -39,13 +36,9 @@ For example:
 
   Deletes the `build` folder
 
-- **images:sprite**
-
-  Creates a sprite from `.png` files placed in the `images/sprites/png` folder and moves it to the `build/images/sprites` folder
-
 - **svg:sprite**
 
-  Creates a sprite from `.svg` files placed in the `images/sprites/svg` folder and moves it to the `build/images/sprites` folder
+  Creates a sprite from `.svg` files placed in the `images/sprite` folder and moves it to the `build/images` folder
 
 - **images:minify**
 
@@ -77,6 +70,10 @@ For example:
 
   Compiles, prefixes css properties as indicated in `.browserslistrc` and minimizes the `main.scss` file from the `styles` folder to the `build` folder
 
+- **sass:prod**
+
+  The same as _sass_, but without sourcemaps
+
 - **js:vendor**
 
   Merges and minimizes all vendor `js` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `vendor.min.js` file to the `build/js` folder
@@ -88,6 +85,10 @@ For example:
 - **js:app-minify**
 
   Merges and minimizes all custom `js` files, which paths are declared in `gulp/configs/config.js`, and moves the resulting `app.min.js` file to the `build/js` folder
+
+- **js:app-minify:prod**
+
+  The same as _js:app-minify_, but without sourcemaps and Webpack uses _production_ mode
 
 - **fonts**
 
@@ -136,7 +137,7 @@ And it can be configured in any preferrable way. Enjoy!
 
 ## Dependencies
 
-You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gulp tasker_ will always be ok working with the latest versions of the dependencies, so it is **strongly recommended**.
+You **should** `npx npm-check-updates -u && npm i` as _Gulp tasker_ will always be ok working with the latest versions of the dependencies, so it is **strongly recommended**.
 
 ```
 "devDependencies": {
@@ -172,10 +173,8 @@ You **should** `yarn upgrade --latest` / `npm update && npm audit fix -f` as _Gu
   "gulp-sourcemaps": "~3.0.0",
   "gulp-svg-sprite": "~1.5.0",
   "gulp-svgmin": "~3.0.0",
-  "gulp.spritesmith": "^6.11.0",
   "husky": "^5.1.2",
   "lint-staged": "^10.5.4",
-  "merge-stream": "^2.0.0",
   "prettier": "^2.2.1",
   "pretty-quick": "^3.1.0",
   "stylelint": "^13.11.0",

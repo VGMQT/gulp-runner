@@ -1,14 +1,13 @@
 module.exports = () => {
-  $.gulp.task('js:app-minify', () =>
+  $.gulp.task('js:app-minify:prod', () =>
     $.gulp
       .src($.config.appJS)
-      .pipe($.webpack({ mode: 'development' }, $.compiler))
+      .pipe($.webpack({ mode: 'production' }, $.compiler))
       .pipe(
         $.gp.babel({
           presets: ['@babel/env'],
         })
       )
-      .pipe($.gp.sourcemaps.init())
       .pipe($.gp.concat('app.js'))
       .pipe(
         $.gp.minify({
@@ -18,7 +17,6 @@ module.exports = () => {
           noSource: true,
         })
       )
-      .pipe($.gp.sourcemaps.write())
       .pipe($.gulp.dest(`${$.config.build}/js`))
   );
 };

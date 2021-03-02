@@ -1,6 +1,6 @@
 module.exports = () => {
-  $.gulp.task('pug', () => {
-    return $.gulp
+  $.gulp.task('pug', () =>
+    $.gulp
       .src(`${$.config.dev}/pug/pages/*.pug`)
       .pipe(
         $.gp.pug({
@@ -10,13 +10,11 @@ module.exports = () => {
       )
       .on(
         'error',
-        $.gp.notify.onError(error => {
-          return {
-            title: 'Pug',
-            message: error.message,
-          };
-        })
+        $.gp.notify.onError((error) => ({
+          title: 'Pug',
+          message: error.message,
+        }))
       )
-      .pipe($.gulp.dest($.config.build));
-  });
+      .pipe($.gulp.dest($.config.build))
+  );
 };
